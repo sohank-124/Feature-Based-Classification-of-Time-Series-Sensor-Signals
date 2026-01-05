@@ -1,4 +1,4 @@
-# Project 2 Data Aquisition using Fast Fouirer Transfrom# Project 2 Data Aquisition using Fast Fouirer Transfrom
+# Project 2 Data Aquisition using Fast Fouirer Transfrom
 
 import pandas as pd
 import serial
@@ -144,8 +144,5 @@ full_file = os.path.join(save_path, 'features.csv')
 # header=False ensures we don't write the column names multiple times
 df = pd.DataFrame([features])
 df.to_csv(full_file, mode='a', header=not os.path.exists(full_file), index=False)
-
-print(f'\nData saved to: {full_file}')
-
 
 print(f'\nData saved to: {full_file}')
