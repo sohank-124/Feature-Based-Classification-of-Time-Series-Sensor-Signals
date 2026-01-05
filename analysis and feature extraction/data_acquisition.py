@@ -1,4 +1,4 @@
-# Project 2 Data Aquisition using Fast Fouirer Transfrom
+# Project 2 Data Aquisition using Fast Fouirer Transfrom# Project 2 Data Aquisition using Fast Fouirer Transfrom
 
 import pandas as pd
 import serial
@@ -135,13 +135,17 @@ features = {
 }
 
 # Define the file path for saving the dataset
-save_path = r"C:\Users\sohan\OneDrive\Documents\CODE\VS CODE PYTHON\ml recordings"
+save_path = os.path.join(os.path.dirname(__file__), "data")
+os.makedirs(save_path, exist_ok=True)
 
 full_file = os.path.join(save_path, 'features.csv')
 
 # Append the new row to the features file for later Machine Learning training
 # header=False ensures we don't write the column names multiple times
 df = pd.DataFrame([features])
-df.to_csv(full_file, mode='a', header=False, index=False)
+df.to_csv(full_file, mode='a', header=not os.path.exists(full_file), index=False)
+
+print(f'\nData saved to: {full_file}')
+
 
 print(f'\nData saved to: {full_file}')
