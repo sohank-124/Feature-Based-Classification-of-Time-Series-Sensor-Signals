@@ -79,3 +79,26 @@ Using only spectral features, the model achieves high accuracy, demonstrating th
 
 ## Repository Structure  
 
+arduino/
+Arduino_flickering.ino
+
+analysis and feature extraction/
+data_acquisition.py
+
+ml_classification/
+model_training.py
+
+data/
+features.csv
+
+figures/
+Arduino_TinkerCAD_Model.png
+
+
+---
+
+## Why This Matters  
+
+This project mirrors how real biological and physical signals are handled in practice. Raw sensor data is rarely clean, and useful information must be extracted through signal processing before any machine learning can be applied. The same pipeline structure used here — acquisition, detrending, spectral analysis, feature engineering, and classification — is standard in fields such as neuroscience, biomedical engineering, and experimental physics.
+
+This project focuses on understanding the full pipeline rather than treating machine learning as a black box.
