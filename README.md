@@ -42,7 +42,7 @@ A TinkerCAD model of the hardware setup is included in the `figures/` folder.
 ### Analysis & Feature Extraction (`analysis and feature extraction/`)
 - Reads serial data into Python  
 - Calculates true sampling rate from timestamp differences  
-- Removes DC offset (detrending)  
+- Removes DC offset  
 - Performs FFT using `np.fft.rfft`  
 - Extracts spectral features including:  
   - Dominant Frequency  
@@ -99,6 +99,4 @@ Arduino_TinkerCAD_Model.png
 
 ## Why This Matters  
 
-This project mirrors how real biological and physical signals are handled in practice. Raw sensor data is rarely clean, and useful information must be extracted through signal processing before any machine learning can be applied. The same pipeline structure used here — acquisition, detrending, spectral analysis, feature engineering, and classification — is standard in fields such as neuroscience, biomedical engineering, and experimental physics.
-
-This project focuses on understanding the full pipeline rather than treating machine learning as a black box.
+This project mirrors how real biological and physical signals are handled in practice. Raw sensor data is rarely clean, and useful information must be extracted through signal processing before any machine learning can be applied. The same pipeline structure used here: acquisition, signal proccesing, spectral analysis, feature engineering, and classification.
